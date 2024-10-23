@@ -8,5 +8,11 @@
     tools:context=".MainActivity">
 
 
-
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="192dp"
+        android:layout_height="226dp"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="215dp"
+        tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>
