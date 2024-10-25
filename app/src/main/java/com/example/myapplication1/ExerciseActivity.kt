@@ -83,7 +83,7 @@ class ExerciseActivity : AppCompatActivity() {
     private fun setExerciseProgressBar() {
         binding?.progressbarExercise?.progress=excrciseresprogress
         excrciserestTimer=object :CountDownTimer(30000,1000){
-            override fun onTick(p0: Long) {
+             override fun onTick(p0: Long) {
                 ++excrciseresprogress
                 binding?.progressbarExercise?.progress=30- excrciseresprogress
                 binding?.tvTimerExercise?.text=(30-excrciseresprogress).toString()
