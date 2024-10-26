@@ -41,6 +41,10 @@ class ExerciseActivity : AppCompatActivity() {
             }
             setupRestView()
             setRestProgressBar()
+            //setupRestView()
+            //setRestProgressBar()
+
+
 
 
 
@@ -68,7 +72,7 @@ class ExerciseActivity : AppCompatActivity() {
 
     private fun setRestProgressBar() {
         binding?.progressbar?.progress=restprogress
-        restTimer=object :CountDownTimer(5000,1000){
+        restTimer=object :CountDownTimer(10000,1000){
             override fun onTick(p0: Long) {
                 ++restprogress
                 binding?.progressbar?.progress=10- restprogress
@@ -102,7 +106,7 @@ class ExerciseActivity : AppCompatActivity() {
 
     private fun setExerciseProgressBar() {
         binding?.progressbarExercise?.progress=excrciseresprogress
-        excrciserestTimer=object :CountDownTimer(5000,1000){
+        excrciserestTimer=object :CountDownTimer(30000,1000){
              override fun onTick(p0: Long) {
                 excrciseresprogress++
                 binding?.progressbarExercise?.progress=30- excrciseresprogress
@@ -111,9 +115,10 @@ class ExerciseActivity : AppCompatActivity() {
 
             override fun onFinish() {
                 if(currentExercisePosition<exerciseList?.size!!-1){
+
                     setupRestView()
-                    if(currentExercisePosition<=12){
-                    setRestProgressBar()}
+
+                    setRestProgressBar()
                 }
 
                 else {
