@@ -41,14 +41,6 @@ class ExerciseActivity : AppCompatActivity() {
             }
             setupRestView()
             setRestProgressBar()
-            //setupRestView()
-            //setRestProgressBar()
-
-
-
-
-
-
 
             insets
 
@@ -62,11 +54,17 @@ class ExerciseActivity : AppCompatActivity() {
         binding?.tvExerciseName?.visibility=View.INVISIBLE
         binding?.flExerciseView?.visibility=View.INVISIBLE
         binding?.ivImage?.visibility=View.INVISIBLE
+        binding?.tvUpcommingLabel?.visibility=View.VISIBLE
+        binding?.tvUpCommingExerciseName?.visibility=View.VISIBLE
+
 
         if(restTimer!=null){
             restTimer?.cancel()
             restprogress=0
         }
+
+        binding?.tvUpCommingExerciseName?.text=exerciseList!![currentExercisePosition+1].getName()
+
     }
 
 
@@ -93,6 +91,9 @@ class ExerciseActivity : AppCompatActivity() {
         binding?.tvExerciseName?.visibility=View.VISIBLE
         binding?.flExerciseView?.visibility=View.VISIBLE
         binding?.ivImage?.visibility=View.VISIBLE
+
+        binding?.tvUpcommingLabel?.visibility=View.INVISIBLE
+        binding?.tvUpCommingExerciseName?.visibility=View.INVISIBLE
 
         if(excrciserestTimer!=null){
             excrciserestTimer?.cancel()

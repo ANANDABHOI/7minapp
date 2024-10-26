@@ -72,6 +72,34 @@
         </LinearLayout>
     </FrameLayout>
 
+    <TextView
+        android:id="@+id/tvUpcommingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upcomming Exercise"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flRestView"
+        app:layout_constraintBottom_toTopOf="@+id/tvUpCommingExerciseName"
+        tools:visibility="visible"
+        />
+    <TextView
+        android:id="@+id/tvUpCommingExerciseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUpcommingLabel"
+        tools:visibility="visible"
+        tools:ignore="MissingPrefix" />
+
     <ImageView
         android:id="@+id/ivImage"
         android:layout_width="match_parent"
