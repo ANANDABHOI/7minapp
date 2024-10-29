@@ -12,6 +12,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication1.databinding.ActivityExerciseBinding
 import java.util.Locale
 
@@ -29,6 +30,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private var tts: TextToSpeech?=null
     private var player: MediaPlayer?=null
 
+    private var exerciseAdapter:ExerciseStatusAdapter?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,11 +53,20 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             }
             setupRestView()
             setRestProgressBar()
+            setupExerciseStatusRecycleView()
 
             insets
 
 
         }
+    }
+
+    private fun setupExerciseStatusRecycleView(){
+
+        binding?.rvExerciseStatus?.layoutManager=LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        exerciseAdapter=ExerciseStatusAdapter(exerciseList!!)
+        binding?.rvExerciseStatus?.adapter=exerciseAdapter
+
     }
     private fun setupRestView(){
 
