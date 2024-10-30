@@ -23,7 +23,8 @@
 
     <FrameLayout
         android:id="@+id/flstart"
-        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="150dp"
@@ -40,4 +41,39 @@
             />
 
     </FrameLayout>
+    <FrameLayout
+        android:id="@+id/flBMI"
+        app:layout_constraintTop_toBottomOf="@id/flstart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/item_circular_accent_baground">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:text="Start"
+            android:textSize="@dimen/default_text_size_button"
+            android:gravity="center"
+            android:textColor="@color/white"
+            />
+
+    </FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Calculoatr"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/coloraccent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flBMI"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
