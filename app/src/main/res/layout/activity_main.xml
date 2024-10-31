@@ -46,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@id/flstart"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/flHistory"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:background="@drawable/item_circular_accent_baground">
@@ -71,8 +71,42 @@
         android:textColor="@color/coloraccent"
         android:layout_gravity="center"
         android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/flBMI"
+        app:layout_constraintStart_toStartOf="@id/flBMI"
+        app:layout_constraintTop_toBottomOf="@+id/flBMI"
+        />
+    <FrameLayout
+        android:id="@+id/flHistory"
+        app:layout_constraintTop_toBottomOf="@id/flstart"
+        app:layout_constraintStart_toEndOf="@id/flBMI"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/item_circular_accent_baground">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/history"
+            android:layout_gravity="center"
+
+            />
+
+    </FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="History"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/coloraccent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/flHistory"
+        app:layout_constraintStart_toStartOf="@id/flHistory"
         app:layout_constraintTop_toBottomOf="@+id/flBMI"
         />
 

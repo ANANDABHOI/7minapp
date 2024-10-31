@@ -15,7 +15,7 @@
         android:background="@color/white"
         />
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilMatricUnitWeight"
+        android:id="@+id/rgUnits"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
