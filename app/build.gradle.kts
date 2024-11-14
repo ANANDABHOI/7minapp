@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    kotlin("kapt")
 }
 
 android {
@@ -14,7 +15,10 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -39,7 +43,12 @@ android {
 }
 
 dependencies {
-    implementation("com.google.android.material:material:1.9.0")
+    implementation ("androidx.room:room-runtime:2.3.0")
+    kapt ("androidx.room:room-compiler:2.3.0")
+    implementation ("androidx.room:room-ktx:2.3.0")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.1")
+
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
