@@ -9,7 +9,6 @@ import android.os.CountDownTimer
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -190,7 +189,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
                 else {
                     finish()
-                    val intent= Intent(this@ExerciseActivity,finish::class.java)
+                    val intent=Intent(this@ExerciseActivity, FinishActivity::class.java)
                     startActivity(intent)
                 }
 

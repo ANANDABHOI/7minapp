@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.Locale
 
-class finish : AppCompatActivity() {
+class FinishActivity : AppCompatActivity() {
     private var binding: ActivityFinishBinding? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

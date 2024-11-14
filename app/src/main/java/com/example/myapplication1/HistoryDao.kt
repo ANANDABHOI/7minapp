@@ -5,11 +5,15 @@ import androidx.room.Insert
 import androidx.room.Query
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface HistoryDao {
     @Insert
     fun insert(historyEntity: HistoryEntity):Long
+
+    @Query("SELECT * FROM `history-table`")
+    fun fetchAllDates():Flow<List<HistoryEntity>>
 
 
 }

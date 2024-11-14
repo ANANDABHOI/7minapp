@@ -13,4 +13,41 @@
         android:background="#FFFFFF"
         android:layout_height="?android:attr/actionBarSize"/>
 
+    <TextView
+        app:layout_constraintTop_toTopOf="@id/toolbar_history_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/tvHistory"
+        android:gravity="center"
+        android:text="Exercise History"
+        android:textSize="18sp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvHistory"
+        app:layout_constraintTop_toBottomOf="@+id/tvHistory"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/toolbar_history_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/tvNoDataAvailable"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="No Data Available"
+        android:textSize="18sp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
